@@ -129,3 +129,24 @@ h1::after{
         transform: translateY(0) rotate(315deg);
     }
 }
+
+.MainVisual::after {
+    content: "|";
+    color: #000;
+    opacity: 0;
+    animation: bar 1s 5.5;
+  }
+  
+  @keyframes bar {
+    0%{
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    } 
+    
+    100% {
+        opacity: 1;
+    }
+  }
+  
