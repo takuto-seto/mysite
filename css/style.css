@@ -150,3 +150,33 @@ h1::after{
     }
   }
   
+  .MainVisual-text {
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 1s;
+    animation: fadeIn 1.5s ease-in 5s forwards;
+  }
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+      transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+
+  @media (min-width:768px) {
+    .MainVisual-text {
+        font-size: 2rem;
+      }
+}
+
+  .active {
+    opacity: 1;         /* 透明度を元に戻す */
+    top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+  }

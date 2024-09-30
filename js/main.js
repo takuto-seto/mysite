@@ -9,7 +9,5 @@ function typeText() {
       index++;
       const randomInterval = Math.floor(Math.random() * 350) + 50;
       setTimeout(typeText, randomInterval);
-    } else {
-      setTimeout(eraseText, 1500);
-    }
+    } 
   }
