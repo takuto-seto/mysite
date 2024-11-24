@@ -11,8 +11,22 @@ ul {
     color: #000;
 }
 
+.box {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8rem);
+  transition: all 2s;
+}
+
+.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 header {
     position: fixed;
+    z-index: 999;
     top: 0;
     right: 0;
     left: 0;
@@ -257,7 +271,7 @@ h1::after{
 
 @media (min-width:768px) {
     .about-top-text {
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
   }
 
@@ -442,14 +456,26 @@ h1::after{
     transition: all .5s;
 }
 
+.work-content-box:nth-child(2){
+  transition: all 1s;
+}
+
+.work-content-box:nth-child(3){
+  transition: all 1.5s;
+}
+
 .work-content-box:hover {
     background-color: rgba(255,127,80,0.3 );
 }
 
 .work-content-box img {
     width: 100%;
-    height: 10rem;
-    background-color: darkgray;
+    height: auto;
+}
+
+.work-content-box a {
+  text-decoration: none;
+  color: #000;
 }
 
 .work-content-text {
@@ -496,17 +522,17 @@ h1::after{
 
  .contact-button {
     width: 100%;
-    height: 1.5rem;
+    height: auto;
     text-align: center;
     border: 1px solid #000;
     border-radius: 10px;
     transition: all 1s;
+    padding: .5rem;
  }
 
  @media (min-width:768px) {
     .contact-button {
         width: 10rem;
-        height: 4rem;
         font-size: 2rem;
         font-weight: bold;
         border: 3px solid #000;
